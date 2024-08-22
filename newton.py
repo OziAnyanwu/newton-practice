@@ -1,5 +1,6 @@
 EPSILON = 0.001
 
+# Returns a function representing the nth derivative of f
 def derivative(f,n):
     if n == 1:
         return lambda x: (f(x+EPSILON) - f(x)) / EPSILON
