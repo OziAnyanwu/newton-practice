@@ -9,7 +9,7 @@ def derivative(f,n):
 def optimize(f, x):
     for _ in range(1000):
         x_new = x - derivative(f,1)(x) / derivative(f,2)(x)
-        if x_new - x < EPSILON:
+        if abs(x_new - x) < EPSILON:
             return x_new
         x = x_new
     print('Didnt find minimum after 1000 runs')
