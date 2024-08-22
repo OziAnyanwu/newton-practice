@@ -10,7 +10,7 @@ def derivative(f, n):
 
 def optimize(f, x_0):
     """
-    Optimize the function f using Newton's method starting 
+    Optimize the function f using Newton's method starting
     with x_0 as your initial guess.
     Returns a tuple contianing the optimum value and the x yielding that value.
     """
@@ -20,15 +20,14 @@ def optimize(f, x_0):
         if abs(x_new - x) < EPSILON:
             return f(x), x_new
         x = x_new
-    
+
     print("Didnt find minimum after 1000 runs")
     return f(x), x
-
 
 
 ## Test it out with f(x) = x^2 - 5
 def f(x):
     return x**2 - 5
 
-x_opt, opt = optimize(f, 17.5)
+opt, x_opt = optimize(f, 17.5)
 print(f"Minimum: {opt} at x = {x_opt}")
