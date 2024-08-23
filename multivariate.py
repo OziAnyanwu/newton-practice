@@ -3,7 +3,7 @@ import numdifftools as nd
 from scipy.linalg import inv
 EPSILON = 1e-6
 
-
+# hi
 
 def optimize(f, x_0):
     """
